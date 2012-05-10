@@ -1,5 +1,6 @@
 body.map {
   height: 100%;
+  padding:0;
 }
 
 .map .navbar {
@@ -8,13 +9,17 @@ body.map {
   margin:0;
 }
 
-.map .container-fluid {
+.map .fullscreen {
   position: absolute;
   top:40px;
   left:0;
   right:0;
   bottom:0;
+}
+
+.map .container-fluid {
   padding:0;
+  height:100%;
 }
 
 .map .row-fluid {

@@ -8,13 +8,13 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="bootstrap-2.0.2/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap-2.0.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="leaflet-0.3.1/leaflet.css" />
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="leaflet-0.3.1/leaflet.ie.css" />
     <![endif]-->
     <link rel="stylesheet" href="bootstrap.map.css" />
-    <link href="bootstrap-2.0.2/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="bootstrap-2.0.2/css/bootstrap-responsive.min.css" rel="stylesheet">
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -57,32 +57,21 @@
       </div>
     </div>
 
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span9">map
-          <div id="map"></div>
+    <div class="fullscreen">
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span9">
+            <div id="map"></div>
+          </div>
+          <div class="span3 hidden-phone">Sidebar</div>
         </div>
-        <div class="span3 hidden-phone">Sidebar</div>
       </div>
     </div>
 
     <!-- Le javascript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster - ->
-    <script src="bootstrap-2.0.2/js/jquery.js"></script>
-    <script src="bootstrap-2.0.2/js/bootstrap-transition.js"></script>
-    <script src="bootstrap-2.0.2/js/bootstrap-alert.js"></script>
-    <script src="bootstrap-2.0.2/js/bootstrap-modal.js"></script>
-    <script src="bootstrap-2.0.2/js/bootstrap-dropdown.js"></script>
-    <script src="bootstrap-2.0.2/js/bootstrap-scrollspy.js"></script>
-    <script src="bootstrap-2.0.2/js/bootstrap-tab.js"></script>
-    <script src="bootstrap-2.0.2/js/bootstrap-tooltip.js"></script>
-    <script src="bootstrap-2.0.2/js/bootstrap-popover.js"></script>
-    <script src="bootstrap-2.0.2/js/bootstrap-button.js"></script>
-    <script src="bootstrap-2.0.2/js/bootstrap-collapse.js"></script>
-    <script src="bootstrap-2.0.2/js/bootstrap-carousel.js"></script>
-    <script src="bootstrap-2.0.2/js/bootstrap-typeahead.js"></script>
--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="bootstrap-2.0.2/js/bootstrap.js"></script>
     <script src="leaflet-0.3.1/leaflet.js"></script>
     <script>
       var map = new L.Map('map');
