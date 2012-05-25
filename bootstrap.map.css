@@ -1,15 +1,15 @@
-body.map {
+body {
   height: 100%;
   padding:0;
 }
 
-.map .navbar {
+.navbar {
   position: relative;
   z-index:999;
   margin:0;
 }
 
-.map .fullscreen {
+.fullscreen {
   position: absolute;
   top:40px;
   left:0;
@@ -17,22 +17,22 @@ body.map {
   bottom:0;
 }
 
-.map .container-fluid {
+.fullscreen .container-fluid {
   padding:0;
   height:100%;
 }
 
-.map .row-fluid {
+.fullscreen .row-fluid {
   height:100%;
 }
 
-.map .row-fluid > [class*="span"] {
+.fullscreen .row-fluid > [class*="span"] {
   position:relative;
   height:100%;
   background-color:#efefef;
 }
 
-.map #map {
+.fullscreen #map {
   position:absolute;
   top:0;
   right:0;
