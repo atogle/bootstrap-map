@@ -1,12 +1,18 @@
 body {
   height: 100%;
-  padding:0;
+  padding:0 !important;
 }
 
 .navbar {
   position: relative;
   z-index:999;
   margin:0;
+}
+
+.navbar-inner {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
 }
 
 .fullscreen {
