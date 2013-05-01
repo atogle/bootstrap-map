@@ -1,0 +1,109 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bootstrap Map</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+    <!-- build:css styles/vendor/leaflet.css -->
+    <link rel="stylesheet" href="components/leaflet/dist/leaflet.css">
+    <!-- endbuild -->
+    <!-- build:css styles/vendor/leaflet.ie.css -->
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="components/leaflet/dist/leaflet.ie.css" />
+    <![endif]-->
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="styles/bootstrap.css">
+
+    <!-- build:css styles/bootstrap.map.css -->
+    <link rel="stylesheet" href="styles/bootstrap.map.css">
+    <!-- endbuild -->
+    <!-- build:css styles/bootstrap.map.ie.css -->
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="styles/bootstrap.map.ie.css">
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body class="map">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Bootstrap Map</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fullscreen">
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span9">
+            <div id="map"></div>
+          </div>
+          <div class="span3 hidden-phone">Sidebar</div>
+        </div>
+      </div>
+    </div>
+
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- build:js scripts/vendor/leaflet.js -->
+    <script src="components/leaflet/dist/leaflet-src.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/jquery.js -->
+    <script src="components/jquery/jquery.js"></script>
+    <!-- endbuild -->
+
+    <script>
+      var map = new L.Map('map');
+
+      var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
+        cloudmadeAttribution = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
+        cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttribution});
+
+      map.setView(new L.LatLng(51.505, -0.09), 13).addLayer(cloudmade);
+    </script>
+
+    <!-- build:js scripts/bootstrap.js -->
+    <script src="components/sass-bootstrap/js/bootstrap-affix.js"></script>
+    <script src="components/sass-bootstrap/js/bootstrap-alert.js"></script>
+    <script src="components/sass-bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="components/sass-bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="components/sass-bootstrap/js/bootstrap-modal.js"></script>
+    <script src="components/sass-bootstrap/js/bootstrap-transition.js"></script>
+    <script src="components/sass-bootstrap/js/bootstrap-button.js"></script>
+    <script src="components/sass-bootstrap/js/bootstrap-popover.js"></script>
+    <script src="components/sass-bootstrap/js/bootstrap-typeahead.js"></script>
+    <script src="components/sass-bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="components/sass-bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="components/sass-bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="components/sass-bootstrap/js/bootstrap-tab.js"></script>
+    <!-- endbuild -->
+
+
+</body>
+</html>

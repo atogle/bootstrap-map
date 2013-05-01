@@ -1,0 +1,47 @@
+body {
+  height: 100%;
+  padding:0 !important;
+}
+
+.navbar {
+  position: relative;
+  z-index:999;
+  margin:0;
+}
+
+.navbar-inner {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+
+.fullscreen {
+  position: absolute;
+  top:40px;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+.fullscreen .container-fluid {
+  padding:0;
+  height:100%;
+}
+
+.fullscreen .row-fluid {
+  height:100%;
+}
+
+.fullscreen .row-fluid > [class*="span"] {
+  position:relative;
+  height:100%;
+  background-color:#efefef;
+}
+
+.fullscreen #map {
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+}
