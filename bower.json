@@ -1,0 +1,9 @@
+{
+  "name": "bootstrap-map",
+  "version": "0.1.0",
+  "dependencies": {
+    "leaflet": "~0.5.1",
+    "bootstrap": "~2.3.1"
+  },
+  "devDependencies": {}
+}
