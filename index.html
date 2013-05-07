@@ -10,16 +10,18 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
+    <link rel="stylesheet" href="components/leaflet/dist/leaflet.css">
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="components/leaflet/dist/leaflet.ie.css" />
+    <![endif]-->
 
-    <link rel="stylesheet" href="styles/vendor/leaflet.css">
-    <link rel="stylesheet" href="styles/vendor/leaflet.ie.css">
+    <link rel="stylesheet" href="components/bootstrap/docs/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="components/bootstrap/docs/assets/css/bootstrap-responsive.css">
 
-    <link rel="stylesheet" href="styles/bootstrap.css">
-
-    <link rel="stylesheet" href="styles/bootstrap.map.css">
-    <link rel="stylesheet" href="styles/bootstrap.map.ie.css">
-
-    <script src="scripts/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="bootstrap.map.css">
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="bootstrap.map.ie.css">
+    <![endif]-->
   </head>
   <body>
     <div class="navbar">
@@ -60,9 +62,9 @@
       <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
-    <script src="scripts/vendor/leaflet.js"></script>
-    <script src="scripts/vendor/jquery.js"></script>
-
+    <script src="components/leaflet/dist/leaflet-src.js"></script>
+    <script src="components/jquery/jquery.js"></script>
+    <script src="components/bootstrap/docs/assets/js/bootstrap.js"></script>
     <script>
       var map = new L.Map('map'),
           url = 'http://{s}.tiles.mapbox.com/v3/atogle.map-vo4oycva/{z}/{x}/{y}.png',
@@ -71,9 +73,5 @@
 
       map.setView([39.9524, -75.1636], 11).addLayer(layer);
     </script>
-
-    <script src="scripts/bootstrap.js"></script>
-
-
 </body>
 </html>
