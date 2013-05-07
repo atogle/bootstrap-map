@@ -5,7 +5,7 @@ body {
 
 .navbar {
   position: relative;
-  z-index:999;
+  z-index:9999;
   margin:0;
 }
 
@@ -23,25 +23,26 @@ body {
   bottom:0;
 }
 
-.fullscreen .container-fluid {
+.fullscreen .container-fluid,
+.fullscreen .container {
   padding:0;
   height:100%;
 }
 
-.fullscreen .row-fluid {
+.fullscreen .row-fluid,
+.fullscreen .row {
   height:100%;
 }
 
-.fullscreen .row-fluid > [class*="span"] {
+.fullscreen .row-fluid > [class*="span"],
+.fullscreen .row > [class*="span"] {
   position:relative;
   height:100%;
-  background-color:#efefef;
 }
 
-.fullscreen #map {
-  position:absolute;
-  top:0;
-  right:0;
-  left:0;
-  bottom:0;
+@media (max-width: 767px) {
+  #map {
+    height: 33%;
+  }
+
 }
