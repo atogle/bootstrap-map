@@ -35,7 +35,7 @@
     <script src="components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body class="map">
+  <body>
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container">
@@ -57,12 +57,15 @@
     </div>
 
     <div class="fullscreen">
+      <!-- container is also an option -->
       <div class="container-fluid">
+        <!-- row is also an option -->
         <div class="row-fluid">
-          <div class="span9">
-            <div id="map"></div>
+          <div id="map" class="span9">
           </div>
-          <div class="span3 hidden-phone">Sidebar</div>
+          <div class="span3">
+            Sidebar
+          </div>
         </div>
       </div>
     </div>
@@ -79,13 +82,12 @@
     <!-- endbuild -->
 
     <script>
-      var map = new L.Map('map');
+      var map = new L.Map('map'),
+          url = 'http://{s}.tiles.mapbox.com/v3/atogle.map-vo4oycva/{z}/{x}/{y}.png',
+          attribution = 'Map data &copy; OpenStreetMap contributors, CC-BY-SA <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>',
+          layer = L.tileLayer(url, {maxZoom: 17, attribution: attribution, subdomains: 'abcd'});
 
-      var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
-        cloudmadeAttribution = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
-        cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttribution});
-
-      map.setView(new L.LatLng(51.505, -0.09), 13).addLayer(cloudmade);
+      map.setView([39.9524, -75.1636], 11).addLayer(layer);
     </script>
 
     <!-- build:js scripts/bootstrap.js -->
